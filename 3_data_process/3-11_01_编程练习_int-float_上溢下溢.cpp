@@ -1,7 +1,8 @@
 /**
  * @file 3-11_01_编程练习_int-float_上溢下溢.cpp
  * @author HailayLin (hailay@qq.com)
- * @brief 
+ * @brief C Prime Plus P68 3.11编程练习1.
+ *    ~ 观察系统如何处理整数上溢、浮点数上溢和浮点数下溢的情况
  * @version 0.1
  * @date 2021-01-08
  * 
@@ -20,6 +21,6 @@ int main()
     float float_underflow = FLT_MIN - 1;
     int int_upperflow = INT_MAX+1; 
     printf("int overflow = %d, float overflow = %e\n", int_upperflow, tooble);
-    printf("float underflow = %e\n", float_underflow);
+    printf("float min = %e, underflow = %e\n", FLT_MIN, float_underflow);
     return 0;    
 }
