@@ -1,3 +1,7 @@
+#include<iostream>
 main(){
-    return -1;
+    std::cout << /**/233;
+    return 0;
 }
+
+/**/*/
