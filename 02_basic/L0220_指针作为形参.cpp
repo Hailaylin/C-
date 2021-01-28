@@ -14,11 +14,11 @@ After swap:a=5,b=3
 #include<iostream>
 using namespace std;
 
-void swap(int *x, int *y){
+void swap(int &x, int &y){
     int tmp;
-    tmp = *x;
-    *x = *y;
-    *y = tmp;
+    tmp = x;
+    x = y;
+    y = tmp;
 }
 
 int main()
@@ -26,7 +26,7 @@ int main()
     int a, b;
     cin >> a >> b ;
     cout << "a=" << a << ",b=" << b << endl; 
-    swap(&a, &b);
+    swap(a, b);
     cout << "After swap:a=" << a << ",b=" << b << endl;
     return 0;
 }
