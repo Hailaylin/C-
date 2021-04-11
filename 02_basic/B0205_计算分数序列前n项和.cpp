@@ -18,22 +18,24 @@
 using namespace std;
 
 //递归求an,不够熟练
-double an(int n, double *array){
+double an_numerator(int n){
+    double numerator[2]={2,3};
     if (n<3)
-        return array[n];
-    else return array[n]=an(n-1, array)+an(n-2, array);
+        return numerator[n];
+    else return an_numerator(n-1)+an_numerator(n-2);
+}
+
+double an_denominator(int n){
+    double denominator[2]={1,2};
+    if (n<3)
+        return denominator[n];
+    else return an_denominator(n-1)+an_denominator(n-2);
 }
 
 int main()
 {
     int n;  //前n项，记录n1 n2 分子分母推an分子分母。numerator分子，denominator分母
-    //动态数组
+    //动态数组?
     cin>>n;
-    double numerator[n+1]={2,3}, denominator[n+1]={1,2};
-
-    if (n<3)
-        cout<<fixed<<setprecision(2)<<numerator[n-1]/denominator[n-1]<<endl;
-    else {      //整体右移
-        cout<<fixed<<setprecision(2)<<<<endl;
-    }
+    cout<<fixed<<setprecision(2)<<an_numerator(n-1)/an_denominator(n-1)<<endl;
 }
