@@ -20,22 +20,29 @@
 先一个函数计算能被3整除，输出*；然后计算它能否被5整除，输出#；输出\n (算法是不对的，解决不了这个问题)
 */
 
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
 int main()
+
 {
-    //因为0/任何数都得0，所以从1开始遍历
-    for (int i = 1; i <= 100; i++)
+    for (int i = 0; i <= 100; ++i)
     {
-        if(i%3==0){         //计算次数99
-            if(i%5==0){     //计算次数33
-                cout<<i<<"*#"<<endl;
-            }
-            cout<<i<<"*"<<endl;
-        }
-        else if(i%5==0)     //计算次数66
-            cout<<i<<"#"<<endl;
-    }                       //一共计算次数198
+        if (i == 0)
+            continue;
+        if (i % 3 == 0 && (i % 5 == 0))
+
+            cout << i << "*#" << endl;
+
+        else if (i % 3 == 0)
+
+            cout << i << "*" << endl;
+
+        else if (i % 5 == 0)
+
+            cout << i << "#" << endl;
+    }
+
     return 0;
 }
