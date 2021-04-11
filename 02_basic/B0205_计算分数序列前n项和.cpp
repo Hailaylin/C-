@@ -11,31 +11,28 @@
 （2）输入：1   输出：2.00
 */
 
-//分析:实质上是两个递推数列求an
+//分析:实质上是两个递推数列求an……这种思路也行？
 
 #include<iostream>
 #include<iomanip>
 using namespace std;
-
-//递归求an,不够熟练
-double an_numerator(int n){
-    double numerator[2]={2,3};
-    if (n<3)
-        return numerator[n];
-    else return an_numerator(n-1)+an_numerator(n-2);
-}
-
-double an_denominator(int n){
-    double denominator[2]={1,2};
-    if (n<3)
-        return denominator[n];
-    else return an_denominator(n-1)+an_denominator(n-2);
-}
-
 int main()
 {
-    int n;  //前n项，记录n1 n2 分子分母推an分子分母。numerator分子，denominator分母
-    //动态数组?
+    int n;
+    float sum=0.0,fz=2.0,fm=1.0,temp;   //定义结果变量（sum），分子（fz）和分母（fm）变量，和临时变量（temp）
     cin>>n;
-    cout<<fixed<<setprecision(2)<<an_numerator(n-1)/an_denominator(n-1)<<endl;
+    for(int i=1;i<=n;i++)  //进行20次循环求和
+    {
+        sum+=(fz/fm);
+        temp=fz;
+        fz=fz+fm;
+        fm=temp;
+    }
+    cout<<fixed<<setprecision(2)<<sum<<endl;  //输出结果
+    return 0;
 }
+/*
+————————————————
+版权声明：本文为CSDN博主「centralunit」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/centralunit/article/details/54145587
+*/

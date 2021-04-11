@@ -10,9 +10,13 @@
 #include<iostream>
 using namespace std;
 
+inline int doub(int x){
+    return x*2;
+}
 int main()
 {
-    float a=0, b=0;
-    cin>>a>>b;
-    cout<<a<<"+"<<b<<"="<<a+b<<endl;
+    for(int i=1; i<=3; i++)
+        cout<<i<<" double is "<<doub(i)<<endl;
+    cout<<"1+2 double is "<<doub(1+2)<<endl;
+    return 0;
 }
