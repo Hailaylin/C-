@@ -6,14 +6,14 @@
             "name": "g++ 单文件可中文文件名调试运行",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/TestProgram.out",//要调试的可执行程序的地址
+            "program": "${fileDirname}\\TestProgram.exe",//要调试的可执行程序的地址
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",        //您的mingw64 gdb.exe目录
+            "miDebuggerPath": "D:\\Apps\\mingw64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录
             "preLaunchTask": "compile",                                 //和task.json的lable要保持一致
             "setupCommands": [
                 {
