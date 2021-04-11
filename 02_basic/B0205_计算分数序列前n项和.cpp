@@ -17,11 +17,11 @@
 #include<iomanip>
 using namespace std;
 
-//递归求an
-int an(int n, int *array){
+//递归求an,不够熟练
+double an(int n, double *array){
     if (n<3)
         return array[n];
-    else return an[n]=an(n-1, array)+an(n-2, array);
+    else return array[n]=an(n-1, array)+an(n-2, array);
 }
 
 int main()
@@ -29,11 +29,11 @@ int main()
     int n;  //前n项，记录n1 n2 分子分母推an分子分母。numerator分子，denominator分母
     //动态数组
     cin>>n;
-    int numerator[n+2]={2,3}, denominator[n+2]={1,2};
+    double numerator[n+1]={2,3}, denominator[n+1]={1,2};
 
     if (n<3)
         cout<<fixed<<setprecision(2)<<numerator[n-1]/denominator[n-1]<<endl;
-    else {
-        cout<<fixed<<setprecision(2)<<an(n-1, numerator)/an(n-1, denominator)<<endl;
+    else {      //整体右移
+        cout<<fixed<<setprecision(2)<<<<endl;
     }
 }
