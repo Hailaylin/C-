@@ -16,26 +16,24 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-//n1,n2整体向右移一位
-void swap(double *n1, double *n2, double *an){
-    double t = *n2;
-    *n2 = *an;
-    *n1 = t;
+
+//递归求an
+int an(int n, int *array){
+    if (n<3)
+        return array[n];
+    else return an[n]=an(n-1, array)+an(n-2, array);
 }
 
 int main()
 {
-    int i=1, n;  //前n项，记录n1 n2 分子分母推an分子分母。numerator分子，denominator分母
-    double n1_numerator=2, n1_denominator=1, n2_numerator=3, n2_denominator=2, an_numerator=0, an_denominator=0;
+    int n;  //前n项，记录n1 n2 分子分母推an分子分母。numerator分子，denominator分母
+    //动态数组
     cin>>n;
+    int numerator[n+2]={2,3}, denominator[n+2]={1,2};
 
-    while(i++<=n)
-    {
-        an_numerator = n1_numerator + n2_numerator;
-        an_denominator = n1_denominator + n2_denominator;
-        swap(&n1_numerator, &n2_numerator, &an_numerator);
-        swap(&n1_denominator, &n2_denominator, &an_denominator);
+    if (n<3)
+        cout<<fixed<<setprecision(2)<<numerator[n-1]/denominator[n-1]<<endl;
+    else {
+        cout<<fixed<<setprecision(2)<<an(n-1, numerator)/an(n-1, denominator)<<endl;
     }
-
-    cout<<fixed<<setprecision(2)<<an_numerator/an_denominator<<endl;
 }
