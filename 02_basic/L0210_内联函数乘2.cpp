@@ -16,7 +16,7 @@ inline int doub(int x){
 int main()
 {
     for(int i=1; i<=3; i++)
-        cout<<i<<" double is "<<doub(i)<<endl;
-    cout<<"1+2 double is "<<doub(1+2)<<endl;
+        cout<<i<<" doubled is "<<doub(i)<<endl;
+    cout<<"1+2 doubled is "<<doub(1+2)<<endl;
     return 0;
 }
