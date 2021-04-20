@@ -47,9 +47,9 @@ int main(){
     double real, imag;
     cin >> real >> imag;
     Complex S1;
-    cout << "复数1的绝对值是:" << S1.abscomplex() << endl;
+    cout <<  S1.abscomplex() << endl;
     Complex S2(1.1);
-    cout << "复数2的绝对值是:" << fixed << setprecision(4) << S2.abscomplex() << endl;
+    cout <<  fixed << setprecision(4) << S2.abscomplex() << endl;
     Complex S3(real, imag);
-    cout << "复数3的绝对值是:" << fixed << setprecision(4) << S3.abscomplex() << endl;
+    cout <<  fixed << setprecision(4) << S3.abscomplex() << endl;
 }
