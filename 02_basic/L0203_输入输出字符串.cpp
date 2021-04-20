@@ -17,8 +17,8 @@
 using namespace std;
 
 int main(){
-    char name[100];         //这样输入不能输入空格……要cin.get/cin.getline
+    char name[20];         //这样输入不能输入空格……要cin.get/cin.getline
     cout << "Hello, your name:" << endl;
-    cin >> name;
+    cin.get(name, 20);
     cout << "My name is " << name << endl;
 }
