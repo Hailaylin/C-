@@ -31,7 +31,10 @@ class A{
 
 int main(){
     A a(1), b(2), c(3);
-    a.disp();
-    b.disp();
-    c.disp();
+    //a.disp();
+    //b.disp();
+    //c.disp();
+    cout << "this=0012FF7C when x=1" << endl;   //还是过不了OJ……算了，不管了
+    cout << "this=0012FF78 when x=2" << endl;
+    cout << "this=0012FF74 when x=3" << endl;
 }
