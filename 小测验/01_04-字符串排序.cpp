@@ -12,3 +12,10 @@
 #include<iostream>
 using namespace std;
 
+int main(){
+    int n;
+    string str[n];
+    void input(string *str, int n);
+    
+}
+
