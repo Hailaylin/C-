@@ -9,7 +9,7 @@
   
 作业提交截止时间：2021/4/30 0:00:00	 
  	
-题目内容：
+题目内容：  
 练习书上102页开始的例3.31，掌握静态成员函数与静态数据成员隶属于类而非隶属于对象的本质。
 程序运行结果如下图所示：
 
@@ -49,7 +49,7 @@ void Small_cat::display(){
 
 //输出总数+体重
 void Small_cat::total_disp(){
-    cout << total_number << " cat's weights are:" << total_weight << "kg" << endl;
+    cout << total_number << " cats' weights are:" << total_weight << "kg" << endl;
 }
 
 int main(){
