@@ -28,18 +28,14 @@
 1967-11
  */
 
-//一开始思路：截取数字int类型，判断后cout输出
+//学习string类的使用，结合题目
 #include<iostream>
 #include<string>
 using namespace std;
 
 int main(){
-    int tempyyyymm;
-    int yy, mm;
-    cin >> tempyyyymm;
-    //if (isYYYYMM(tempyyyymm)){
-        mm = tempyyyymm % 100;
-        yy = (tempyyyymm - mm)/100;
-    //}
-    cout << "yy=" << yy << "mm=" << mm << endl;
+    string str;
+    cin >> str;
+    int strlong = str.length();
+    cout << "lenth =" << strlong << endl;
 }
