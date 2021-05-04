@@ -31,6 +31,7 @@
 //学习string类的使用，结合题目
 #include<iostream>
 #include<string>
+#include<algorithm>
 using namespace std;
 
 int main(){
