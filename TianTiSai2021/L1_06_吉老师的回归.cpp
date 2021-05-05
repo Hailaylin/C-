@@ -61,9 +61,9 @@ int main(){
         question.push_back(str_ques_temp);
     }
     int do_i=0, do_ques=m, skip_ques=0;
-    for(do_i = 0; do_ques>=0 && do_i<=n; do_i++){   //i记录当前做到题的下标题号，做一个题就-一个可做题数
+    for(do_i = 0; do_ques>0 && do_i<n; do_i++){   //i记录当前做到题的下标题号，做一个题就-一个可做题数
         if ( question[do_i].find("easy") != string::npos || question[do_i].find("qiandao") != string::npos ) {
-            skip_ques++;
+            continue;
         }
         else {
             do_ques--;

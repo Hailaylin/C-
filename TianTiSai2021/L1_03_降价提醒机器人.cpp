@@ -34,12 +34,12 @@ On Sale! 98.9
 #include<iostream>
 #include<iomanip>
 using namespace std;
-
+//可以输入一个处理一个
 int main(){
     int n;
     float m;
     cin >> n >> m;
-    float *price = new float (n);
+    double *price = new double[n];
     for (int i=0; i<n; i++){
         cin >> price[i];
     }
