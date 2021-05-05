@@ -53,7 +53,7 @@ int main(){
     //getchar();
     string str_multi;
     int multi = 0;
-    for (int i=0; i<n && n>=an.size(); ++i) {   //i为数组下标
+    for (int i=0; i<n && n>=int(an.size()); ++i) {   //i为数组下标,size() 返回的是无符号类型的，与int比较会报错，就强制转换一下吧
         str_multi.clear();
         multi = an[i] * an[i+1];
         str_multi = to_string(multi);
