@@ -36,7 +36,48 @@ class X{
     private:
         int a;
     public:
-        X(int sa):a(sa) {}
+        X(int sa):a(sa) {
+            cout << "Constructing class X." << endl;
+        }
+        int getX(){
+            return a;
+        }
+        ~X(){
+            cout << "Destructing class X." << endl;
+        }
+};
+
+class Y{
+    private:
+        int b;
+    public:
+        Y(int sb):b(sb) {
+            cout << "Constructing class Y." << endl;
+        }
+        int getY(){
+            return b;
+        }
+        ~Y(){
+            cout << "Destructing class Y." << endl;
+        }
+};
+
+
+class Z:public X, private Y{
+    private:
+        int c;
+    public:
+        Z(int sa, int sb, int sc):X(sa),Y(sb) {
+            c = sc;
+            cout << "Constructing class Z." << endl;
+        }
+        ~Z(){
+            cout << "Destructing class Z." << endl;
+        }
+        Y::getY;    //access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+        int getZ(){
+            return c;
+        }
 };
 
 int main()
