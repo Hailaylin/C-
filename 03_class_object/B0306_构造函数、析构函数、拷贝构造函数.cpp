@@ -44,30 +44,21 @@ class Point{
         int a, b;
     public:
         Point(int sa, int sb):a(sa),b(sb) {
-            //printf("Print(%d,%d)\n", a,b);
+            printf("Point(%d,%d)\n", a,b);
         }
-        /*Point(const Point &p){
+        Point(const Point &p){
+            a=p.a, b=p.b;                           //自定义拷贝构造函数，数据成员要逐个复制
             printf("copy Point(%d,%d)\n", p.a, p.b);
         }
         ~Point(){
-            printf("~Point():%d,%d\n", a,b);
-        }*/
-        friend void show(Point &, Point &);
+            printf("~Point():%d,%d\n", a, b);
+        }
+        friend void show(const Point p1, const Point p2);
 };
 
-void show(Point & p1, Point &p2){
-    printf("Point(%d,%d)\n"
-            "Point(%d,%d)\n"
-            "copy Point(%d,%d)\n"
-            "copy Point(%d,%d)\n"
-            "x=%d,y=%d\n"
-            "x=%d,y=%d\n"
-            "~Point():%d,%d\n"
-            "~Point():%d,%d\n"
-            "~Point():%d,%d\n"
-            "~Point():%d,%d\n",p1.a,p1.b,  p2.a,p2.b, p2.a,p2.b, p1.a,p1.b, p1.a,p1.b, p2.a,p2.b, p1.a,p1.b, p2.a,p2.b, p2.a,p2.b, p1.a,p1.b);
-    //printf("x=%d,y=%d\n", p1.a, p1.b);
-    //printf("x=%d,y=%d\n", p2.a, p2.b);
+void show(const Point p1, const Point p2){
+    cout << "x=" << p1.a << "," << "y=" << p1.b << endl;
+    printf("x=%d,y=%d\n", p2.a, p2.b);
 }
 
 int main()
