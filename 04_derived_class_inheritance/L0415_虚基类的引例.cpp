@@ -53,7 +53,7 @@ class Derived:public Base1, public Base2{
     public:
         Derived(){
             cout << "Base1::a=" << Base1::a << endl;
-            cout << "Base2::a=" << Base1::a << endl;
+            cout << "Base2::a=" << Base2::a << endl;
         }
 };
 
