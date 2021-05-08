@@ -1,34 +1,28 @@
-#include<bits/stdc++.h>
+/**
+ * 
+ *
+ * int arr[5]={1,2,3,4,5};
+ *  *(*(&arr+1)-1)  
+ */
+
+#include<iostream>
 using namespace std;
 
 int main(){
-    vector<int> an;
-    int a1, a2, n;
-    cin >> a1 >> a2 >> n;
-    //an[0]=a1, an[1]=a2;
-    an.push_back(a1);
-    an.push_back(a2);
-    //getchar();
-    string str_multi;
-    int multi = 0;
-    for (int i=0; i<n && n>=an.size(); ++i) {   //i为数组下标
-        str_multi.clear();
-        multi = an[i] * an[i+1];
-        str_multi = to_string(multi);
-        //cout << " str_multi:" <<str_multi << endl;
-        if(str_multi.length()==2) {     //判断乘积的位数
-            an.push_back(stoi(str_multi.substr(0,1)));
-            an.push_back(stoi(str_multi.substr(1,1)));
-        }
-        else if(str_multi.length()==1){
-            an.push_back(stoi(str_multi.substr(0,1)));
-        }
-    }
-    
-    for(int i=0; i<n-1; i++) {
-        cout << an[i] << " ";
-    }
-    cout << an[n-1];
-    return 0;
+    int arr[5]={1,2,3,4,5};
+    int arr2[5]={6,7,8,9,0};
+    cout << "arr=\t"<< arr << endl;
+    cout << "arr+1=\t" << arr+1 << endl;
+    cout << "arr2=\t" << arr2 << endl;
+    cout << "*(arr+1)=\t" << *(arr+1) << endl;
+    cout << "&arr=\t" << &arr << endl;
+    cout << "&arr+1\t" << &arr+1 << endl;
+    cout << "*(&arr+1)=\t" << *(&arr+1) << endl;
+    cout << "*(*(&arr+1))=\t" << *(*(&arr+1)) << endl;
+    //cout << *(*(&arr[0]+1)-1) << endl; //"*" 的操作数必须是指针，但它具有类型 "int"
+    //cout << *(*(arr+1)-1) << endl; //"*" 的操作数必须是指针，但它具有类型 "int"
+    cout << "*(*(&arr+1)-1)=\t" << *(*(&arr+1)-1) << endl;
+    cout << "*(*(&arr+1)+1)=\t" << *(*(&arr+1)+1) << endl;
+    cout << "*(*(&arr+1)+2)=\t" << *(*(&arr+1)+2) << endl;
 }
 
