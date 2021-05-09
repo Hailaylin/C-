@@ -12,10 +12,12 @@
 using namespace std;
 
 int main(){
-    long long sum=1;
-    for (int i=1; i<=2021; i++){
+    unsigned long long sum=1;
+    for (int i=1; i<=2021; i+=2){
         sum=sum*i;
-        cout << "\ti=" << i << "\tsum=" << sum;
+        sum=sum%100000;
+        cout << "i=" << i << "\tsum=" << sum << endl;
     }
     return 0;
 }
+
