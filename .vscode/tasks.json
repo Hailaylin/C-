@@ -6,7 +6,7 @@
             "type": "shell",
             "label": "compile",
             "command": "g++",
-            "args": [
+            "args": [               //不指定使用的c++标准，默认c++14
                 "-g",               //生成调试信息
                 "-Wall",            //允许发出GCC能够提供的所有有用的警告
                 "${file}",

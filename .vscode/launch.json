@@ -2,17 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++ f5+ctrl 单文件可中文文件名调试运行",
+            "name": "g++ f5+ctrl 单文件可中文文件名调试运行",   //不喜欢这个名字就随便改呗233
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\TestProgram.exe",   //要调试的可执行程序的地址,编译好的程序放在工作目录下
+            "program": "${workspaceFolder}\\TestProgram.exe",   //要调试的可执行程序的地址,编译好的程序放在工作目录下,要和tasks.json里面g++生成的可执行文件对应
             "args": [],                                         //只有一个.exe文件显得美观，少占用空间
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}",                        //移动目录到文件夹下执行
             "environment": [],
             "externalConsole": false,                           //终端复用
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\Apps\\mingw64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录
+            "miDebuggerPath": "D:\\Apps\\mingw64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录，自己改了目录就得和c_cpp_properties.json里面的g++地址一起改
             "preLaunchTask": "compile",                                 //和task.json的lable要保持一致
             "setupCommands": [
                 {

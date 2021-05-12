@@ -12,8 +12,12 @@
 
 int main(){
     int n, sum=0;
-    while(std::cin >> n){
-        sum+=n;
+    std::cin >> n;
+    for(int i=0; i<n; i++){
+        std::cin >> i;
+        sum+=i;
     }
+
+    
     std::cout << sum << std::endl;
 }

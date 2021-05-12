@@ -3,17 +3,17 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}**"
+                "${workspaceFolder}**"  //寻找头文件的地方，默认是打开的文件夹里面找
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:\\Apps\\mingw64\\bin\\g++.exe",
-            "cStandard": "c11",                 //按照mingw64的c/c++标准配置
+            "compilerPath": "D:\\Apps\\mingw64\\bin\\g++.exe",  //地址如果不同就改
+            "cStandard": "c11",                 //按照mingw64的c/c++标准配置，不用改
             "cppStandard": "c++14",
-            "intelliSenseMode": "linux-gcc-x64" //排除警告
+            "intelliSenseMode": "linux-gcc-x64" //排除警告，gcc是linux的，这个不用改
         }
     ],
     "version": 4

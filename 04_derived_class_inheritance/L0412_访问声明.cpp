@@ -28,7 +28,8 @@ using namespace std;
 
 class A{
     private:
-        int x;
+        A(){}
+        int x=0;
     public:
         A (int x1){
             x=x1;
