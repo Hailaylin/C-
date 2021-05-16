@@ -4,6 +4,7 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "algorithm": "cpp",
-        "b0208_picpp": "cpp"
+        "b0208_picpp": "cpp",
+        "string": "cpp"
     }
 }
