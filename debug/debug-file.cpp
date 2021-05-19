@@ -13,9 +13,5 @@
 //#include<cstring>
 //using namespace std;
 int main(){
-    char arr[2][4];
-    strcpy(*arr,"you");
-        strcpy(arr[1],"me");
-    arr[0][3]='&';
-    printf("%s\n",*arr);
+    
 }
