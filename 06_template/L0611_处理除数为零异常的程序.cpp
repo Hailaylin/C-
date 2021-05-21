@@ -22,7 +22,7 @@ int main(){
     try
     {
         cout << "7/3=" << Div(7,3) << endl;
-        cout << Div(5,0) << endl;
+        cout << "5/3=" << Div(5,0) << endl;
     }
     catch(int)
     {
