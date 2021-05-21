@@ -36,8 +36,7 @@ void Stack<T>::push(T ch){
         cout  << "Stack is full";
         return;
     }
-    stck[tos]=ch;
-    tos++;
+    stck[tos++]=ch; //后加先减
 }
 
 template<typename T>
@@ -46,11 +45,11 @@ T Stack<T>::pop(){
         cout << "Stack is empty";
         return 0;
     }
-    tos--;
-    return stck[tos];
+    return stck[--tos];   //简略一下
 }
 
 int main(){
+    //字符堆栈
     Stack<char> s;
     int i;
     s.init();
@@ -60,12 +59,22 @@ int main(){
     for(i = 0; i<3; i++){
         cout << "pop s:" << s.pop() << endl;
     }
+    //整型堆栈
     Stack<int> is;
     is.init();
     is.push(1);
-    is.push(2);
     is.push(3);
+    is.push(5);
     for(i = 0; i<3; i++){
         cout << "pop is:" << is.pop() << endl;
     }
 }
+
+    //输出结果
+/*     pop s:c
+    pop s:b
+    pop s:a
+    pop is:3
+    pop is:2
+    pop is:1 */
+    //后入先出
