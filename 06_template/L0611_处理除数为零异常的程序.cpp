@@ -13,8 +13,6 @@ using namespace std;
 
 int Div(int x, int y){
     if(0==y){
-        //cout << "Wrong: Diveded by zero!" << endl;
-        //exit(0);
         throw y;
     }
     return x/y;
@@ -24,11 +22,11 @@ int main(){
     try
     {
         cout << "7/3=" << Div(7,3) << endl;
-        cout << Div(7,0) << endl;
+        cout << Div(5,0) << endl;
     }
     catch(int)
     {
-        cerr << "Wrong: Diveded by zero!" << endl;
+        cout << "Wrong: Diveded by zero!" << endl;
     }
     cout << "end" << endl;
 }
