@@ -17,10 +17,11 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-//貌似不能用模板？
 
-void vprint(vector<int> &a){
-    vector<int>::iterator i;
+template<typename T>
+void vprint(vector<T> &a){
+    //用了模板，函数里面不能嵌套用木板，但是又不能在函数内定义iterator...
+    vector<T>::iterator i;
     for(i = a.begin(); i!=a.end(); i++){    //'i' was not declared in this scope
         cout << *i << ",";
     }
