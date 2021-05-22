@@ -21,7 +21,7 @@ using namespace std;
 template<typename T>
 void vprint(vector<T> &a){
     //用了模板，函数里面不能嵌套用木板，但是又不能在函数内定义iterator...
-    vector<T>::iterator i;
+    vector<T>::iterator i;  //报错need 'typename' before 'std::vector<T>::iterator' because 'std::vector<T>' is a dependent scope
     for(i = a.begin(); i!=a.end(); i++){    //'i' was not declared in this scope
         cout << *i << ",";
     }
