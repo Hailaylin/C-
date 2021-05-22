@@ -18,17 +18,16 @@
 #include<vector>
 using namespace std;
 //貌似不能用模板？
-template<typename T>
-void vprint(vector<T> a){
-    template<typename T>    //a template declaration cannot appear at block scope
-    vector<T>::iterator i;
+
+void vprint(vector<int> &a){
+    vector<int>::iterator i;
     for(i = a.begin(); i!=a.end(); i++){    //'i' was not declared in this scope
-        cout << i << ",";
+        cout << *i << ",";
     }
     printf("\n");
 }
 
 int main(){
     vector<int> nu(5,99);
-    vprintf(nu);    //cannot convert 'std::vector<int>' to 'const char*'
+    vprint(nu);    //cannot convert 'std::vector<int>' to 'const char*'
 }
