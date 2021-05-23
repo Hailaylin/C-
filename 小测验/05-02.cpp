@@ -16,7 +16,7 @@ class MMars{
     public:
         MMars(int x1=0, int y1=0):x(x1),y(y1) {}
         MMars operator++(int);
-        MMars operator++();
+        MMars &operator++();
         void print();
 };
 
@@ -25,12 +25,11 @@ void MMars::print(){
 }
 
 //dym提出了个好问题，为什么重载自增运算符不能返回一个新对象呢，非要返回*this呢？
-MMars MMars::operator++(){
+MMars &MMars::operator++(){
     //x+=7;
     //y+=7;
-    MMars tmp(x+7, y+7);
-    return tmp;//*this;
-}
+    return MMars(x+7,y+7); //非常量引用的初始值必须为左值
+}   //用引用就更错了，还是得*this返回，为什么呢
 
 MMars MMars::operator++(int){
     MMars temp(*this);
