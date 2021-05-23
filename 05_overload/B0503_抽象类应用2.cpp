@@ -64,7 +64,53 @@ int main()
 }
  */
 #include<iostream>
+#include<string>
+using namespace std;
 
+class Student{
+    protected:
+        string name;
+        int days;
+        float subsidy;
+    public:
+        Student(string n1, int d1):name(n1), days(d1) {}
+        virtual void show() = 0;
+        virtual void pay() = 0;
+};
+
+class Graduate:public Student {
+    public:
+        Graduate(string n1, int d1):Student(n1, d1) {
+            subsidy = 1000;
+        }
+        void show();
+        void pay();
+};
+
+void Graduate::show(){
+    cout << "Graduate:" << name << ",subsidy=" << subsidy << endl;
+}
+
+void Graduate::pay(){
+    subsidy = subsidy + 60 * days;
+}
+
+class UnderGraduate : public Student {
+    public:
+        UnderGraduate(string n1, int d1):Student(n1, d1) {
+            subsidy = 600;
+        }
+        void show();
+        void pay();
+};
+
+void UnderGraduate::pay(){
+    subsidy += 50 * days;
+}
+
+void UnderGraduate::show(){
+    cout << "UnderGraduate:" << name << ",subsidy=" << subsidy << endl;
+}
 
 int main()
 {
