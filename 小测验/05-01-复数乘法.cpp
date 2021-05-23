@@ -32,23 +32,20 @@ Complex operator*(Complex &a, Complex &b)
 }
 
 void Complex::print(){
-    if(real==0){
-        if(imag==0){
-            cout << "(" << real << ")" ;
+    printf("(");
+    if(real!=0){    //real!=0的情况
+        cout << real;
+        if(imag!=0){
+            if(imag>0) printf("+"); //imag为+就加个+号
+            cout << imag << "i";    //负数原样输出
         }
-        else{
-            cout << "(" << imag << "i)" ;
-        }
+        //imag==0不输出
     }
-    else if(imag>0){
-        cout << "(" << real << "+" << imag << "i)" ;
+    else {  //real==0的情况
+        if (imag!=0) cout << imag << "i"; //imag不为0
+        else printf("0");                 //imag==0的情况
     }
-    else if(imag==0){
-        cout << "(" << real << ")" ;
-    }
-    else{
-        cout << "(" << real << imag << "i)" ;
-    }
+    printf(")");
 }
 
 int main()
