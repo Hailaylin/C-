@@ -24,10 +24,12 @@ void MMars::print(){
     cout << "x=" << x << ",y=" << y << endl;
 }
 
+//dym提出了个好问题，为什么重载自增运算符不能返回一个新对象呢，非要返回*this呢？
 MMars MMars::operator++(){
-    x+=7;
-    y+=7;
-    return *this;
+    //x+=7;
+    //y+=7;
+    MMars tmp(x+7, y+7);
+    return tmp;//*this;
 }
 
 MMars MMars::operator++(int){
