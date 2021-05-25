@@ -12,7 +12,7 @@
             "environment": [],
             "externalConsole": false,                           //终端复用
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\Apps\\mingw64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录，自己改了目录就得和c_cpp_properties.json里面的g++地址一起改
+            "miDebuggerPath": "D:\\Apps\\TDM-GCC-64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录，自己改了目录就得和c_cpp_properties.json里面的g++地址一起改
             "preLaunchTask": "compile",                                 //和task.json的lable要保持一致
             "setupCommands": [
                 {
