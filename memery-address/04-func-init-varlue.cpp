@@ -5,7 +5,8 @@
  * @date 2021-05-27
  * 
  * @copyright Copyright (c) 2021  Hailay.site & Xihe.ai
- * 
+ * 参考 http://c.biancheng.net/cpp/html/3185.html
+ * 印象笔记 https://app.yinxiang.com/fx/9d745349-9609-41a6-9c86-8bd169974f06
  */
 
 #include <stdio.h>
