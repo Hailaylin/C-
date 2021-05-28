@@ -6,6 +6,7 @@
  * 
  * @copyright Copyright (c) 2021  Hailay.site & Xihe.ai
  * alogrithm 里面有函数 swap()
+ * http://c.biancheng.net/view/2206.html
  */
 
 #include<iostream>
