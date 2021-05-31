@@ -1,49 +1,44 @@
+
 #include<iostream>
 using namespace std;
+class B0 {
+public:
+    virtual void print(const char* p)
+    {
+        cout << p << "print()" << endl;
+    }
 
-template<typename T>
-class Base{
-    protected:
-    T a,b;
-    public:
-    Base(T x=0,T y=0);
-    void show();
 };
-
-template<typename T>
-Base<T>::Base(T x,T y)
-{
-    a=x;b=y;
-}
-
-template<typename T>
-void Base<T>::show()
-{
-    cout<<"Base a="<<a<<","<<"b="<<b<<endl;
-}
-
-class Derive:public Base<float>{
-    protected:
-    float c;
+    class B1 :public B0 {
     public:
-    Derive(float x=3.3,float y=4.4):Base(x,y) {c=5.5;};
-    void show();
-};
+        virtual void print(const char* p)
+        {
+            cout << p << "print()" << endl;
+        }
+  
+    };
+   
+    class B2 :public B1 {
+    public:
+        virtual void print(const char* p)
+        {
+            cout << p << "print()" << endl;
+        }
+   
+    };
 
-
-void Derive::show()
-{
-    cout<<"Derive a="<<a<<",b="<<b<<",c="<<c<<endl;
-}
 
 int main()
-{
-    Base<int> bb(3,7);
-    bb.show();
+    {
+        B0 ob0, * op;
+        op = &ob0;
+        op->print("B0:");
+        B1 ob1;
+        op = &ob1;
+        op->print("B1:");
+        B2 ob2;
+        op = &ob2;
+        op->print("B2:");
 
-    Derive dd(3.14,2.72),dt;
-    dd.show();
-    dt.show();
-    
-    return 0;
-}
+        return 0;
+    }
