@@ -1,44 +1,56 @@
-
-#include<iostream>
+#include <iostream>
+#include <iomanip>
 using namespace std;
-class B0 {
-public:
-    virtual void print(const char* p)
+
+template<typename I>
+
+I input(I x[],int n)
+{
+    for(int i=0;i<n;i++)
     {
-        cout << p << "print()" << endl;
+        cin>>x[i];
     }
+}
 
-};
-    class B1 :public B0 {
-    public:
-        virtual void print(const char* p)
+template<typename S>
+
+S sort(S x[],int n)
+{
+    int k, t;
+    for (int i=0; i < n-1; i++)
+    {
+        k = i;
+        for (int j =i+1; j < n; j++)
         {
-            cout << p << "print()" << endl;
+            if(x[j]>x[k])
+            {
+                k = j;
+               
+            }
+             t = x[k]; x[k] = x[i]; x[i] = t;
         }
-  
-    };
-   
-    class B2 :public B1 {
-    public:
-        virtual void print(const char* p)
-        {
-            cout << p << "print()" << endl;
-        }
-   
-    };
+    }
+}
 
+template<typename O>
 
+O output(O x[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+       cout<<setw(6)<<x<<endl;
+    }
+    cout<<endl;
+}
 int main()
-    {
-        B0 ob0, * op;
-        op = &ob0;
-        op->print("B0:");
-        B1 ob1;
-        op = &ob1;
-        op->print("B1:");
-        B2 ob2;
-        op = &ob2;
-        op->print("B2:");
-
-        return 0;
-    }
+{
+	int a[5];
+	float b[5];
+	
+	input(a,5);
+	sort(a,5);
+	output<int>(a,5);
+	input<float>(b,5);
+	sort<float>(b,5);
+	output(b,5);
+}

@@ -19,9 +19,20 @@
  */
 
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
+ostream &output1(ostream &stream)
+{
+    stream.setf(ios::left);
+    stream<<setw(10)<<hex<<setfill('&');
+    return stream;
+}
 
 int main(){
+    int in;
+    cin >> in;
+    cout << in << endl;
+    cout << output1 << in << endl;   
     return 0;
 }
