@@ -35,6 +35,7 @@ int main()
  */
 
 #include<iostream>
+
 using namespace std;
 
 template<class T1, typename T2>
@@ -43,8 +44,26 @@ class Base{
         T1 a;
         T2 b;
     public:
-        
+        Base(T1 sa, T2 sb):a(sa),b(sb) {}
+        void show();
 };
+
+class Derive:public Base<float,float>{
+    private:
+        int c;
+    public:
+        Derive(float sa=3.3, float sb=4, int sc=5):Base(sa,sb) {c=sc;}        
+        void show();
+};
+
+template<typename T1, typename T2>
+void Base<T1,T2>::show(){
+    cout << "Base a=" << a << ",b=" << b << endl;
+}
+
+void Derive::show(){
+    cout << "Derive a=" << a << ",b=" << b << ",c=" << c << endl;
+}
 
 int main()
 {
