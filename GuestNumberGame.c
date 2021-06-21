@@ -15,17 +15,18 @@
 int main(){
     int guest_count=0;
     int guest_num=0;
-
+    int num;
     //提示信息
     printf("[INFO]本猜数游戏要求猜测1~100的随机数.\n");
-
-    //生成随机数num 1~100
-    srand((unsigned)time(NULL));
-    int num = rand()%100 + 1;
+        //生成随机数num 1~100
+        srand((unsigned)time(NULL)); //重新播种
+        num = rand()%100 + 1;
 
     //猜测一次
     char again='Y';
     while('Y'==again){
+
+        //输入猜数
         printf("[INFO]请输入您猜测的数字(1-100):");
         scanf("%d", &guest_num);
         getchar();              //吸回车
@@ -37,7 +38,11 @@ int main(){
             //是否进行下一轮
             printf("是否进行下一轮😏,是or否(Y)or(N):");
             scanf("%c",&again);
+            //各项初始化
             guest_count=0;  //初始化计数
+            srand((unsigned)time(NULL)); //重新播种
+            num = rand()%100 + 1;
+
             if('N'==again) break;
         }
 
